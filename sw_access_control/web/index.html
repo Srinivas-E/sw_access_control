@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>XMOS acs</title>
+</head>
+<body>
+<br>
+<h1>XMOS Access Control System</h1>
+<br>
+<br>
+<p><img src="images/xmos_logo.png"></p>
+<p>{% process_web_page_data(buf,app_state,connection_state) %}</p>
+<br>
+<br>
+<br>
+<form name="form" action = "" method="post">
+<table border='10'>
+<tr>
+<td width='150'>Door control</td>
+<td width='70'><input type="radio" name='l0' id='l0' value='0' {% get_web_user_selection(buf,app_state,connection_state,0,1) %}>Close</td>
+<td width='70'><input type="radio" name='l0' id='l0' value='1' {% get_web_user_selection(buf,app_state,connection_state,1,1) %}>Open</td>
+</tr>
+</table>
+<br>
+<br>
+<br>
+<br>
+<br>
+<input type="submit" Value="Submit"/>
+</form>
+</body>
+</html>
